@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>برنامج الطفل الآمن - مقترح مبدئي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #D32F2F; /* أحمر كرمزي مطفي */
+            --dark-color: #111111; /* أسود داكن للمتن */
+            --bg-light: #f9f9f9;
+            --bg-card: #ffffff;
+            --text-muted: #555555;
+            --border-color: #e0e0e0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--dark-color);
+            line-height: 1.8;
+            padding-bottom: 60px;
+        }
+
+        header {
+            background-color: var(--bg-card);
+            border-bottom: 1px solid var(--border-color);
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .header-container h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header-container p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 30px;
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--bg-light);
+            padding-bottom: 10px;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+            color: var(--dark-color);
+            text-align: justify;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            position: relative;
+            padding-right: 20px;
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+        }
+
+        ul li::before {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 12px;
+            width: 6px;
+            height: 6px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .grid-item {
+            background-color: var(--bg-light);
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            border-radius: 4px;
+        }
+
+        .grid-item h3 {
+            color: var(--dark-color);
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .grid-item p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 0;
+        }
+
+        .targets-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .target-tag {
+            background-color: var(--bg-light);
+            border: 1px solid var(--border-color);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 600px) {
+            .header-container h1 {
+                font-size: 2rem;
+            }
+            section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1>برنامج الطفل الآمن</h1>
+            <p>منصة إعلامية توعوية تسهم في تعزيز ثقافة حماية الطفل ونشر الوعي بحقوقه</p>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>الرؤية العامة</h2>
+            <p>يهدف برنامج "الطفل الآمن" إلى أن يكون منصة إعلامية توعوية تسهم في تعزيز ثقافة حماية الطفل في السودان، ونشر الوعي بحقوق الأطفال، ودعم الأسر والمجتمع بالمعلومات الصحيحة المستندة إلى قانون الطفل، والمعايير المهنية، وخبرات المختصين، بما يراعي الظروف الإنسانية والاجتماعية التي تمر بها البلاد.</p>
+        </section>
+
+        <section>
+            <h2>أهداف البرنامج</h2>
+            <ul>
+                <li>نشر الوعي بحقوق الطفل وواجبات المجتمع تجاهه.</li>
+                <li>التوعية بمخاطر التحرش، والعنف، والإهمال، والاستغلال، والاتجار بالأطفال.</li>
+                <li>التوعية بعمالة الأطفال، والتسرب من التعليم، وأطفال الشوارع، والأطفال مجهولي الأبوين.</li>
+                <li>مناقشة الآثار المترتبة على الحرب والنزوح والنزاعات على الأطفال.</li>
+                <li>التوعية بالعادات والممارسات الضارة مثل ختان الإناث وزواج الأطفال.</li>
+                <li>تعزيز التدخل المبكر للأطفال ذوي الإعاقة أو الاحتياجات الخاصة.</li>
+                <li>تقديم حلول عملية للأسر والأطفال.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>الفئات المستهدفة</h2>
+            <div class="targets-container">
+                <span class="target-tag">الأطفال</span>
+                <span class="target-tag">أولياء الأمور</span>
+                <span class="target-tag">المعلمون</span>
+                <span class="target-tag">القيادات المجتمعية</span>
+                <span class="target-tag">الشباب</span>
+                <span class="target-tag">الإعلاميون</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>فقرات البرنامج المقترحة</h2>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <h3>1. الحوار الرئيسي</h3>
+                    <p>نقاشات مع مختصين في علم النفس، الخدمة الاجتماعية، القانون، حماية الطفل، والإعلام.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>2. فقرة الأطفال</h3>
+                    <p>موجهة للأطفال بلغة بسيطة تساعدهم على حماية أنفسهم ومعرفة كيفية طلب المساعدة.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>3. الكاميرا المتجولة</h3>
+                    <p>جولات في الأسواق والأحياء والمؤسسات لقياس وعي المجتمع بقضايا الطفل.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>4. حالة الحلقة</h3>
+                    <p>عرض حالة إنسانية أو واقعية (مع الحفاظ على الخصوصية) واستخلاص الدروس منها.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>5. التغطيات الخاصة</h3>
+                    <p>تغطية المبادرات والفعاليات الخاصة بحماية الطفل.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>الحضور الرقمي والشراكات</h2>
+            <p><strong>الحضور الرقمي:</strong> إنشاء صفحة وموقع أو أرشيف إلكتروني للبرنامج لنشر الحلقات والمواد التوعوية والتفاعل مع الجمهور.</p>
+            <p><strong>الشراكات:</strong> التعاون مع الجهات الحكومية والمنظمات الوطنية والدولية العاملة في مجال حماية الطفل مثل اليونيسف، بلان إنترناشونال، منظمة إنقاذ الطفولة، المجلس القومي لرعاية الطفولة، والوزارات المختصة، إضافة إلى منظمات المجتمع المدني.</p>
+        </section>
+
+        <section>
+            <h2>النتائج المتوقعة</h2>
+            <ul>
+                <li>رفع وعي المجتمع وتمكين الأطفال لحماية أنفسهم.</li>
+                <li>دعم الأسر بالمعلومات والحلول العملية.</li>
+                <li>تشجيع الإبلاغ المبكر والتعاون الوثيق بين المؤسسات لحماية الأطفال.</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>مقترح برنامج الطفل الآمن &copy; 2026</p>
+        </footer>
+    </main>
+
+</body>
+</html>
