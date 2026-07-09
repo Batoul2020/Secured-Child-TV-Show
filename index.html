@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +7,13 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght=300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Cairo', sans-serif;
             background-color: #FAFAF8;
         }
-        /* هوية عيون سنار - مستوحاة من ألوان العلم السوداني */
+        /* الهوية البصرية المعتمدة */
         .bg-sinnar-dark { background-color: #1A1A1A; }
         .text-sinnar-red { color: #CE1126; }
         .bg-sinnar-red { background-color: #CE1126; }
@@ -24,176 +24,200 @@
         .hover\:bg-sinnar-red-dark:hover { background-color: #A50E1F; }
     </style>
 </head>
-<body class="text-gray-900 antialiased">
+<body class="text-gray-900 antialiased flex flex-col min-h-screen">
 
     <header class="bg-sinnar-dark text-white sticky top-0 z-50 shadow-md">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center gap-2">
-            <div class="flex items-center gap-2 sm:gap-4 overflow-hidden">
-                <img src="logo_child_safe.png" alt="شعار برنامج الطفل الآمن" class="h-9 w-9 sm:h-10 sm:w-10 object-contain bg-white rounded-full p-0.5 shrink-0">
-                <div class="bg-white text-black font-black px-2.5 py-1 text-base sm:text-xl tracking-wider rounded shrink-0">عيون سنار</div>
-                <span class="text-gray-400 text-xl hidden sm:inline">|</span>
-                <h1 class="text-sm sm:text-lg font-bold text-gray-200 hidden sm:block truncate">برنامج الطفل الآمن</h1>
+        <div class="container mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+                <div class="bg-white text-black font-black px-3 py-1 text-xl tracking-wider rounded">عيون سنار</div>
+                <span class="text-gray-500 text-xl hidden sm:inline">|</span>
+                <h1 class="text-base sm:text-lg font-bold text-gray-200">برنامج الطفل الآمن</h1>
             </div>
-            <nav class="hidden md:flex gap-6 font-medium text-sm whitespace-nowrap">
+            <nav class="flex flex-wrap justify-center gap-4 sm:gap-6 font-semibold text-sm">
                 <a href="#about" class="hover:text-sinnar-red transition">الرؤية العامة</a>
+                <a href="#legal" class="hover:text-sinnar-red transition">المرجع القانوني</a>
                 <a href="#segments" class="hover:text-sinnar-red transition">فقرات البرنامج</a>
-                <a href="#digital-presence" class="hover:text-sinnar-red transition">الحضور الرقمي</a>
                 <a href="#partners" class="hover:text-sinnar-red transition">الشركاء</a>
-                <a href="#archive" class="hover:text-sinnar-red transition">الأرشيف الرقمي</a>
             </nav>
-            <button class="bg-sinnar-red hover:bg-sinnar-red-dark text-white text-[11px] sm:text-xs font-bold px-3 py-2 rounded transition shrink-0 whitespace-nowrap">
-                البث المباشر
-            </button>
+            <a href="#archive" class="bg-sinnar-red hover:bg-sinnar-red-dark text-white text-xs font-bold px-5 py-2.5 rounded transition shadow-sm w-full sm:w-auto text-center">
+                البث المباشر والأرشيف
+            </a>
         </div>
     </header>
 
-    <section class="relative bg-gradient-to-r from-slate-900 to-slate-800 text-white py-16 md:py-20 px-4">
-        <div class="max-w-4xl mx-auto text-center">
-            <span class="bg-sinnar-red text-xs uppercase font-bold px-3 py-1 rounded-full tracking-widest inline-block mb-4">قريباً على عيون سنار</span>
-            <h2 class="text-3xl md:text-5xl font-black mb-6 leading-tight">برنامج الطفل الآمن</h2>
-            <p class="text-base md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-                منصة إعلامية توعوية تسهم في تعزيز ثقافة حماية الطفل في السودان، ونشر الوعي بحقوق الأطفال ودعم الأسر بالمعلومات الصحيحة المستندة إلى القانون.
+    <section class="relative bg-gradient-to-r from-slate-900 to-slate-800 text-white overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <img src="https://raw.githubusercontent.com/Batoul2020/Secured-Child-TV-Show/main/mainImages/%D8%A7%D9%84%D8%B5%D9%88%D8%B1%D8%A9-%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A%D8%A9-%D9%84%D8%A7%D8%B7%D9%81%D8%A7%D9%84-%D8%A7%D9%84%D8%B3%D9%88%D8%AF%D8%A7%D9%86.jpg" alt="أطفال السودان" class="w-full h-full object-cover">
+        </div>
+        <div class="relative container mx-auto px-4 py-20 md:py-28 max-w-5xl text-center z-10 space-y-6">
+            <span class="bg-sinnar-red text-xs uppercase font-black px-4 py-1.5 rounded-full tracking-widest inline-block mb-2 shadow-sm">قريباً من ولاية سنار</span>
+            <h2 class="text-4xl md:text-6xl font-black mb-4 leading-tight tracking-tight">برنامج الطفل الآمن</h2>
+            <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light">
+                منصة إعلامية توعوية تسهم في حماية ورعاية أطفالنا بالنيل الأزرق، ونشر ثقافة الأمان القانوني والاجتماعي للأسر والمجتمعات المحلية.
             </p>
         </div>
     </section>
 
-    <main class="container mx-auto px-4 py-12 max-w-7xl">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <main class="container mx-auto px-4 py-12 max-w-7xl flex-grow">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
             
             <div class="lg:col-span-2 space-y-12">
                 
-                <div id="about" class="bg-white p-6 md:p-8 rounded-lg shadow-sm border-r-4 border-sinnar-red">
-                    <h3 class="text-2xl font-bold mb-4 text-gray-800">الرؤية العامة والأهداف</h3>
-                    <p class="text-gray-600 leading-relaxed mb-6">
-                        يهدف البرنامج إلى أن يكون منصة إعلامية توعوية تسهم في تعزيز ثقافة حماية الطفل في السودان، ونشر الوعي بحقوق الأطفال، ودعم الأسر والمجتمع بالمعلومات الصحيحة المستندة إلى قانون الطفل، والمعايير المهنية، وخبرات المختصين، بما يراعي الظروف الإنسانية والاجتماعية التي تمر بها البلاد.
+                <div id="about" class="bg-white p-6 md:p-10 rounded-xl shadow-sm border-r-8 border-sinnar-red space-y-6">
+                    <h3 class="text-2xl md:text-3xl font-black text-gray-800">الرؤية العامة والأهداف</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                        <p class="text-base md:text-lg text-gray-600 leading-relaxed">
+                            يهدف البرنامج إلى أن يكون منصة إعلامية توعوية تسهم في تعزيز ثقافة حماية الطفل في السودان، ونشر الوعي بحقوق الأطفال، ودعم الأسر والمجتمع بالمعلومات الصحيحة المستندة إلى قانون الطفل، والمعايير المهنية، وخبرات المختصين، بما يراعي الظروف الإنسانية والاجتماعية في إقليم النيل الأزرق.
+                        </p>
+                        <div class="rounded-lg overflow-hidden shadow-sm border border-gray-100">
+                            <img src="https://raw.githubusercontent.com/Batoul2020/Secured-Child-TV-Show/main/mainImages/%D9%88%D9%84%D8%A7%D9%8A%D8%A9-%D8%B3%D9%86%D8%A7%D8%B1-%D8%A7%D9%84%D8%B3%D9%88%D8%AF%D8%A7%D9%86.jpg" alt="ولاية سنار السودان" class="w-full h-48 object-cover">
+                        </div>
+                    </div>
+                    
+                    <hr class="border-gray-100 my-4">
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="flex items-start gap-3">
+                            <span class="text-sinnar-green font-bold text-xl">✓</span>
+                            <p class="text-base text-gray-700 font-medium">نشر الوعي بحقوق الطفل وواجبات المجتمع تجاهه.</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-sinnar-green font-bold text-xl">✓</span>
+                            <p class="text-base text-gray-700 font-medium">التوعية بمخاطر التحرش، والعنف، والإهمال، والاستغلال.</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-sinnar-green font-bold text-xl">✓</span>
+                            <p class="text-base text-gray-700 font-medium">معالجة قضايا عمالة الأطفال والتسرب الدراسي.</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-sinnar-green font-bold text-xl">✓</span>
+                            <p class="text-base text-gray-700 font-medium">مناقشة الآثار المترتبة على النزاعات والنزوح على الأطفال.</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-sinnar-green font-bold text-xl">✓</span>
+                            <p class="text-base text-gray-700 font-medium">محاربة العادات الضارة كختان الإناث وزواج القاصرات.</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-sinnar-green font-bold text-xl">✓</span>
+                            <p class="text-base text-gray-700 font-medium">تقديم حلول دعم نفسي وعملي متكاملة للأسر.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="legal" class="bg-white p-6 md:p-10 rounded-xl shadow-sm border-r-8 border-sinnar-green space-y-6">
+                    <h3 class="text-2xl md:text-3xl font-black text-gray-800">المرجع القانوني والدولي</h3>
+                    <p class="text-base md:text-lg text-gray-600 leading-relaxed">
+                        يستند البرنامج في كافة مواده التوعوية وإرشاداته الموجهة للمجتمع إلى مواثيق دولية وقوانين وطنية راسخة تضمن حقوق حماية ورعاية الطفولة:
                     </p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div class="flex items-start space-x-3 space-x-reverse">
-                            <span class="text-sinnar-green text-xl">✓</span>
-                            <p class="text-sm text-gray-700">نشر الوعي بحقوق الطفل وواجبات المجتمع تجاهه.</p>
-                        </div>
-                        <div class="flex items-start space-x-3 space-x-reverse">
-                            <span class="text-sinnar-green text-xl">✓</span>
-                            <p class="text-sm text-gray-700">التوعية بمخاطر التحرش، والعنف، والإهمال، والاستغلال، والاتجار بالأطفال.</p>
-                        </div>
-                        <div class="flex items-start space-x-3 space-x-reverse">
-                            <span class="text-sinnar-green text-xl">✓</span>
-                            <p class="text-sm text-gray-700">التوعية بعمالة الأطفال، والتسرب من التعليم، وأطفال الشوارع، والأطفال مجهولي الأبوين.</p>
-                        </div>
-                        <div class="flex items-start space-x-3 space-x-reverse">
-                            <span class="text-sinnar-green text-xl">✓</span>
-                            <p class="text-sm text-gray-700">مناقشة الآثار المترتبة على الحرب والنزوح والنزاعات على الأطفال.</p>
-                        </div>
-                        <div class="flex items-start space-x-3 space-x-reverse">
-                            <span class="text-sinnar-green text-xl">✓</span>
-                            <p class="text-sm text-gray-700">التوعية بالعادات والممارسات الضارة مثل ختان الإناث وزواج الأطفال.</p>
-                        </div>
-                        <div class="flex items-start space-x-3 space-x-reverse">
-                            <span class="text-sinnar-green text-xl">✓</span>
-                            <p class="text-sm text-gray-700">تعزيز التدخل المبكر للأطفال ذوي الإعاقة أو الاحتياجات الخاصة.</p>
-                        </div>
-                        <div class="flex items-start space-x-3 space-x-reverse">
-                            <span class="text-sinnar-green text-xl">✓</span>
-                            <p class="text-sm text-gray-700">تقديم حلول عملية للأسر والأطفال.</p>
-                        </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+                        <a href="https://arabruleoflaw.org/files/legaldatabase/Laws/Sudan/Doc01.pdf" target="_blank" class="block p-5 bg-gray-50 hover:bg-gray-100 rounded-lg border border-gray-200 transition group text-center space-y-3">
+                            <img src="https://raw.githubusercontent.com/Batoul2020/Secured-Child-TV-Show/main/mainImages/%D8%B1%D9%85%D8%B2-%D8%A7%D9%84%D9%82%D8%A7%D9%86%D9%88%D9%86.jpg" alt="قانون الطفل السوداني" class="h-16 mx-auto rounded object-cover shadow-sm">
+                            <h4 class="font-bold text-gray-800 group-hover:text-sinnar-red transition text-base">قانون الطفل السوداني لسنة 2010</h4>
+                            <span class="text-xs text-sinnar-green font-semibold block">اضغط لقراءة نص القانون ←</span>
+                        </a>
+
+                        <a href="https://www.unicef.org/ar/%D9%86%D8%B5-%D8%A7%D8%AA%D9%81%D8%A7%D9%82%D9%8A%D8%A9-%D8%AD%D9%82%D9%88%D9%82-%D8%A7%D9%84%D8%B7%D9%81%D9%84/%D8%A7%D8%AA%D9%81%D8%A7%D9%82%D9%8A%D8%A9-%D8%AD%D9%82%D9%8وف-%D8%A7%D9%84%D8%B7%D9%81%D9%84" target="_blank" class="block p-5 bg-gray-50 hover:bg-gray-100 rounded-lg border border-gray-200 transition group text-center space-y-3">
+                            <img src="https://raw.githubusercontent.com/Batoul2020/Secured-Child-TV-Show/main/mainImages/%D8%B7%D9%81%D9%84%D8%A9-%D8%B3%D9%88%D8%AF%D8%A7%D9%86%D9%8A%D8%A9.jpg" alt="اتفاقية حقوق الطفل" class="h-16 mx-auto rounded object-cover shadow-sm">
+                            <h4 class="font-bold text-gray-800 group-hover:text-sinnar-red transition text-base">اتفاقية حقوق الطفل الدولية (اليونيسف)</h4>
+                            <span class="text-xs text-sinnar-green font-semibold block">اضغط لمطالعة الاتفاقية ←</span>
+                        </a>
+
+                        <a href="https://hrlibrary.umn.edu/arab/afr-child-charter.html" target="_blank" class="block p-5 bg-gray-50 hover:bg-gray-100 rounded-lg border border-gray-200 transition group text-center space-y-3">
+                            <img src="https://raw.githubusercontent.com/Batoul2020/Secured-Child-TV-Show/main/mainImages/%D8%A7%D9%84%D8%B3%D9%88%D8%AF%D8%A7%D9%86-%D8%AA%D8%B7%D9%87%D8%B1-%D9%88%D9%84%D8%A7%D9%8A%D8%A9-%D8%B3%D9%86%D8%A7%D8%B1-%D8%A8%D8%A7%D9%84%D8%A7%D8%AD%D9%85%D8%B1.webp" alt="الميثاق الأفريقي لحقوق الطفل" class="h-16 mx-auto rounded object-cover shadow-sm">
+                            <h4 class="font-bold text-gray-800 group-hover:text-sinnar-red transition text-base">الميثاق الأفريقي لحقوق ورفاهية الطفل 1990</h4>
+                            <span class="text-xs text-sinnar-green font-semibold block">بدأ العمل به في 1999 ←</span>
+                        </a>
                     </div>
                 </div>
 
                 <div id="segments" class="space-y-6">
-                    <h3 class="text-2xl font-bold text-gray-800 pb-2 border-b-2 border-gray-200">فقرات البرنامج المقترحة</h3>
+                    <h3 class="text-2xl md:text-3xl font-black text-gray-800 pb-2 border-b-4 border-gray-200">فقرات البرنامج المقترحة</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         
-                        <div class="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition">
-                            <span class="text-xs font-bold text-sinnar-red block mb-1">الفقرة الأولى</span>
-                            <h4 class="text-lg font-bold mb-2 text-gray-800">الحوار الرئيسي</h4>
-                            <p class="text-sm text-gray-600">نقاشات حية ومباشرة مع مختصين في علم النفس، الخدمة الاجتماعية، القانون، والإعلام.</p>
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 space-y-2">
+                            <span class="text-xs font-black text-sinnar-red tracking-wider block">الفقرة الأولى</span>
+                            <h4 class="text-xl font-bold text-gray-800">الحوار الرئيسي مع الخبراء</h4>
+                            <p class="text-base text-gray-600 leading-relaxed">نقاشات حية ومباشرة مع مختصين في علم النفس، الخدمة الاجتماعية، القانون، والإعلام لتقديم رعاية شاملة متوافقة مع الأطر المهنية.</p>
                         </div>
 
-                        <div class="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition">
-                            <span class="text-xs font-bold text-sinnar-red block mb-1">الفقرة الثانية</span>
-                            <h4 class="text-lg font-bold mb-2 text-gray-800">لغة بسيطة للأطفال</h4>
-                            <p class="text-sm text-gray-600">مواد موجهة ومبسطة تساعد الأطفال على حماية أنفسهم ومعرفة كيفية طلب المساعدة والأمان.</p>
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 space-y-2">
+                            <span class="text-xs font-black text-sinnar-red tracking-wider block">الفقرة الثانية</span>
+                            <h4 class="text-xl font-bold text-gray-800">لغة بسيطة للأطفال</h4>
+                            <p class="text-base text-gray-600 leading-relaxed">مواد إعلامية موجهة ومبسطة تساعد الأطفال على فهم حقوقهم وحماية أنفسهم ومعرفة طرق طلب الأمان والمساعدة بذكاء وثقة.</p>
                         </div>
 
-                        <div class="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition">
-                            <span class="text-xs font-bold text-sinnar-red block mb-1">الفقرة الثالثة</span>
-                            <h4 class="text-lg font-bold mb-2 text-gray-800">الكاميرا المتجولة</h4>
-                            <p class="text-sm text-gray-600">جولات ميدانية في الأسواق والأحياء والمؤسسات لقياس وعي المجتمع بقضايا الطفل وحقوقه.</p>
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 space-y-2">
+                            <span class="text-xs font-black text-sinnar-red tracking-wider block">الفقرة الثالثة</span>
+                            <h4 class="text-xl font-bold text-gray-800">الكاميرا المتجولة في سنار</h4>
+                            <p class="text-base text-gray-600 leading-relaxed">جولات ميدانية دورية في أسواق وأحياء ومؤسسات ولاية سنار لقياس الوعي المجتمعي الفعلي ورصد التحديات على أرض الواقع.</p>
                         </div>
 
-                        <div class="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition">
-                            <span class="text-xs font-bold text-sinnar-red block mb-1">الفقرة الرابعة</span>
-                            <h4 class="text-lg font-bold mb-2 text-gray-800">حالة الحلقة</h4>
-                            <p class="text-sm text-gray-600">عرض حالة إنسانية أو واقعية مع الحفاظ الصارم على الخصوصية، لاستخلاص الدروس التوعوية.</p>
-                        </div>
-
-                        <div class="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition">
-                            <span class="text-xs font-bold text-sinnar-red block mb-1">الفقرة الخامسة</span>
-                            <h4 class="text-lg font-bold mb-2 text-gray-800">تغطية المبادرات والفعاليات</h4>
-                            <p class="text-sm text-gray-600">تغطية المبادرات والفعاليات الخاصة بحماية الطفل التي تُقام على مستوى المجتمع والمؤسسات.</p>
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 space-y-2">
+                            <span class="text-xs font-black text-sinnar-red tracking-wider block">الفقرة الرابعة</span>
+                            <h4 class="text-xl font-bold text-gray-800">حالة الحلقة توعية وعبرة</h4>
+                            <p class="text-base text-gray-600 leading-relaxed">عرض حالات إنسانية أو واقعية مع التزام صارم بالخصوصية والسرية والأمان الرقمي، لاستخلاص الدروس التوعوية للأسر.</p>
                         </div>
 
                     </div>
-                </div>
-
-                <div id="digital-presence" class="bg-white p-6 md:p-8 rounded-lg shadow-sm border-r-4 border-sinnar-green">
-                    <h3 class="text-2xl font-bold mb-4 text-gray-800">الحضور الرقمي</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        إنشاء صفحة وموقع أو أرشيف إلكتروني للبرنامج لنشر الحلقات والمواد التوعوية والتفاعل مع الجمهور.
-                    </p>
-                </div>
-
-                <div id="expected-results" class="bg-white p-6 md:p-8 rounded-lg shadow-sm border-r-4 border-sinnar-red">
-                    <h3 class="text-2xl font-bold mb-4 text-gray-800">النتائج المتوقعة</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        رفع وعي المجتمع، تمكين الأطفال، دعم الأسر، وتشجيع الإبلاغ المبكر والتعاون بين المؤسسات لحماية الأطفال.
-                    </p>
                 </div>
 
             </div>
 
             <div class="space-y-8">
                 
-                <div class="bg-slate-900 text-white p-6 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-bold mb-4 pb-2 border-b border-slate-700">الفئات المستهدفة</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-slate-800 text-xs px-3 py-2 rounded">الأطفال</span>
-                        <span class="bg-slate-800 text-xs px-3 py-2 rounded">أولياء الأمور</span>
-                        <span class="bg-slate-800 text-xs px-3 py-2 rounded">المعلمون</span>
-                        <span class="bg-slate-800 text-xs px-3 py-2 rounded">القيادات المجتمعية</span>
-                        <span class="bg-slate-800 text-xs px-3 py-2 rounded">الشباب والإعلاميون</span>
+                <div class="bg-slate-900 text-white p-6 rounded-xl shadow-md space-y-4">
+                    <h3 class="text-xl font-bold pb-2 border-b border-slate-700">الفئات المستهدفة</h3>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="bg-slate-800 text-sm px-3 py-1.5 rounded font-medium">الأطفال واليافعين</span>
+                        <span class="bg-slate-800 text-sm px-3 py-1.5 rounded font-medium">أولياء الأمور والأسر</span>
+                        <span class="bg-slate-800 text-sm px-3 py-1.5 rounded font-medium">المعلمون والتربويون</span>
+                        <span class="bg-slate-800 text-sm px-3 py-1.5 rounded font-medium">القيادات المجتمعية بسنار</span>
+                        <span class="bg-slate-800 text-sm px-3 py-1.5 rounded font-medium">الإعلاميون وصناع المحتوى</span>
                     </div>
                 </div>
 
-                <div id="partners" class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                    <h3 class="text-lg font-bold mb-4 text-gray-800">شركاء البرنامج</h3>
-                    <ul class="space-y-2 text-sm text-gray-600">
-                        <li class="flex items-center space-x-2 space-x-reverse">
-                            <span class="w-2 h-2 bg-sinnar-red rounded-full"></span>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center space-y-4">
+                    <h3 class="text-lg font-black text-gray-800">فريق الخبراء والمختصين</h3>
+                    <div class="rounded-lg overflow-hidden max-h-40 shadow-inner">
+                        <img src="https://raw.githubusercontent.com/Batoul2020/Secured-Child-TV-Show/main/mainImages/%D8%A7%D9%84%D8%AE%D8%A8%D8%B1%D8%A7%D8%A1-%D8%A7%D9%84%D9%85%D8%AE%D8%AA%D8%B5%D9%8A%D9%86.jpg" alt="الخبراء والمختصين بحماية الطفل" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-base text-gray-600 leading-relaxed">
+                        يستضيف البرنامج نخبة من كبار الباحثين القانونيين، الأطباء النفسيين، وخبراء الخدمة الاجتماعية لتقديم حلول علمية قابلة للتطبيق مباشرة.
+                    </p>
+                </div>
+
+                <div id="partners" class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 space-y-4">
+                    <h3 class="text-lg font-black text-gray-800 pb-2 border-b border-gray-100">شركاء البرنامج</h3>
+                    <ul class="space-y-3 text-base text-gray-600 font-medium">
+                        <li class="flex items-center gap-3">
+                            <span class="w-2.5 h-2.5 bg-sinnar-red rounded-full flex-shrink-0"></span>
                             <span>منظمة اليونيسف (UNICEF)</span>
                         </li>
-                        <li class="flex items-center space-x-2 space-x-reverse">
-                            <span class="w-2 h-2 bg-sinnar-red rounded-full"></span>
-                            <span>منظمة إنقاذ الطفولة</span>
+                        <li class="flex items-center gap-3">
+                            <span class="w-2.5 h-2.5 bg-sinnar-red rounded-full flex-shrink-0"></span>
+                            <span>منظمة إنقاذ الطفولة الدولية</span>
                         </li>
-                        <li class="flex items-center space-x-2 space-x-reverse">
-                            <span class="w-2 h-2 bg-sinnar-red rounded-full"></span>
-                            <span>المجلس القومي لرعاية الطفولة</span>
+                        <li class="flex items-center gap-3">
+                            <span class="w-2.5 h-2.5 bg-sinnar-red rounded-full flex-shrink-0"></span>
+                            <span>المجلس القومي لرعاية الطفولة - السودان</span>
                         </li>
-                        <li class="flex items-center space-x-2 space-x-reverse">
-                            <span class="w-2 h-2 bg-sinnar-red rounded-full"></span>
-                            <span>بلان إنترناشونال والوزارات المختصة</span>
+                        <li class="flex items-center gap-3">
+                            <span class="w-2.5 h-2.5 bg-sinnar-red rounded-full flex-shrink-0"></span>
+                            <span>بلان إنترناشونال والوزارات الإقليمية المختصة</span>
                         </li>
                     </ul>
                 </div>
 
-                <div id="archive" class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 text-center">
-                    <h3 class="text-lg font-bold mb-2 text-gray-800">الأرشيف الرقمي للبرنامج</h3>
-                    <p class="text-xs text-gray-500 mb-4">تابع الحلقات السابقة والمواد التوعوية وتفاعل مع فريق الإعداد.</p>
-                    <input type="email" placeholder="بريدك الإلكتروني لمتابعة الحلقات" class="w-full text-sm border p-2 rounded mb-2 text-center focus:outline-none focus:ring-1 focus:ring-sinnar-red">
-                    <button class="w-full bg-sinnar-red hover:bg-sinnar-red-dark text-white text-sm font-bold py-2 rounded transition">
-                        اشترك في النشرة التوعوية
-                    </button>
+                <div id="archive" class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center space-y-4">
+                    <h3 class="text-lg font-black text-gray-800">الأرشيف الرقمي للبرنامج</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">تابع الحلقات التلفزيونية والمواد الإرشادية فور بثها وتواصل مع أسرة البرنامج.</p>
+                    <div class="space-y-2">
+                        <input type="email" placeholder="أدخل بريدك الإلكتروني لمتابعة الحلقات" class="w-full text-base border border-gray-300 p-3 rounded-lg text-center focus:outline-none focus:ring-2 focus:ring-sinnar-red bg-gray-50">
+                        <button class="w-full bg-sinnar-red hover:bg-sinnar-red-dark text-white text-base font-bold py-3 rounded-lg transition shadow-sm cursor-pointer">
+                            اشترك في النشرة التوعوية
+                        </button>
+                    </div>
                 </div>
 
             </div>
@@ -201,10 +225,11 @@
         </div>
     </main>
 
-    <footer class="bg-sinnar-dark text-gray-400 py-8 mt-20 border-t-4 border-sinnar-red text-sm">
+    <footer class="bg-sinnar-dark text-gray-400 py-10 mt-auto border-t-4 border-sinnar-red text-base">
         <div class="container mx-auto px-4 text-center space-y-4">
-            <p class="text-gray-300 font-bold">برنامج الطفل الآمن - منصة إعلامية توعوية لحماية مستقبل أطفالنا</p>
-            <p class="text-xs">© 2026 جميع الحقوق محفوظة لقناة عيون سنار بالشراكة مع منظمات حماية الطفل.</p>
+            <p class="text-gray-200 font-bold text-lg">برنامج الطفل الآمن - منصة إعلامية توعوية لحماية مستقبل أطفالنا في السودان</p>
+            <p class="text-sm text-gray-500">يبث محلياً عبر تلفزيون ولاية سنار - إقليم النيل الأزرق</p>
+            <p class="text-xs text-gray-600 pt-4 border-t border-neutral-800">© 2026 جميع الحقوق محفوظة لقناة عيون سنار بالشراكة مع منظمات حماية الطفل.</p>
         </div>
     </footer>
 
