@@ -1,0 +1,105 @@
+  :root{
+    --ink:#15130F;
+    --paper:#F5F1E7;
+    --paper-2:#EEE7D6;
+    --red:#CE1126;
+    --red-dark:#9C0D1D;
+    --green:#046A38;
+    --gold:#C89B3C;
+    --muted:#5B5348;
+  }
+  body{
+    font-family:'IBM Plex Sans Arabic', sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+  }
+  .font-display{ font-family:'Cairo', sans-serif; }
+  .font-mono{ font-family:'Space Mono', monospace; }
+
+  .bg-ink{ background:var(--ink); }
+  .bg-red{ background:var(--red); }
+  .bg-red-dark{ background:var(--red-dark); }
+  .bg-green{ background:var(--green); }
+  .bg-gold{ background:var(--gold); }
+  .bg-paper2{ background:var(--paper-2); }
+  .text-ink{ color:var(--ink); }
+  .text-red{ color:var(--red); }
+  .text-green{ color:var(--green); }
+  .text-gold{ color:var(--gold); }
+  .text-muted{ color:var(--muted); }
+  .border-ink{ border-color:var(--ink); }
+  .border-red{ border-color:var(--red); }
+  .border-gold{ border-color:var(--gold); }
+  .hover-red-dark:hover{ background:var(--red-dark); }
+
+  /* Broadcast chyron eyebrow — signature element */
+  .chyron{
+    display:inline-flex;
+    align-items:center;
+    gap:.5rem;
+    background:var(--ink);
+    color:var(--paper);
+    font-family:'Cairo', sans-serif;
+    font-weight:800;
+    font-size:.72rem;
+    letter-spacing:.08em;
+    padding:.35rem .9rem .35rem .55rem;
+    clip-path:polygon(0 0, 100% 0, 92% 100%, 0% 100%);
+  }
+  .chyron.red{ background:var(--red); }
+  .chyron.green{ background:var(--green); }
+
+  .timecode{
+    font-family:'Space Mono', monospace;
+    font-size:.75rem;
+    letter-spacing:.03em;
+    color:var(--gold);
+  }
+
+  /* On-air pulsing dot */
+  .on-air-dot{
+    width:.5rem; height:.5rem; border-radius:9999px; background:#fff;
+    animation:pulse-dot 1.8s ease-in-out infinite;
+  }
+  @keyframes pulse-dot{
+    0%,100%{ opacity:1; box-shadow:0 0 0 0 rgba(255,255,255,.5); }
+    50%{ opacity:.55; box-shadow:0 0 0 6px rgba(255,255,255,0); }
+  }
+
+  /* Ticker */
+  .ticker-track{
+    display:flex;
+    width:max-content;
+    animation: ticker 32s linear infinite;
+  }
+  @keyframes ticker{
+    from{ transform:translateX(0); }
+    to{ transform:translateX(-50%); }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .ticker-track{ animation:none; }
+    .on-air-dot{ animation:none; }
+  }
+
+  .card{
+    background:#fff;
+    border:1px solid #E7DFCB;
+  }
+
+  .goal-check{
+    flex:0 0 auto;
+    width:1.6rem; height:1.6rem;
+    display:flex; align-items:center; justify-content:center;
+    border-radius:9999px;
+    background:var(--paper-2);
+    color:var(--green);
+    font-weight:800;
+    font-size:.8rem;
+  }
+
+  .reveal{ opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease; }
+  .reveal.in{ opacity:1; transform:translateY(0); }
+  @media (prefers-reduced-motion: reduce){ .reveal{ opacity:1; transform:none; transition:none; } }
+
+  ::selection{ background:var(--gold); color:var(--ink); }
+  :focus-visible{ outline:3px solid var(--gold); outline-offset:2px; }
